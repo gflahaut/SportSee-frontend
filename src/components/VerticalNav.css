@@ -1,0 +1,25 @@
+.vertical-nav {
+    background-color: #020203;
+    filter: drop-shadow(0px 8px 8px #00000040);
+}
+
+img.icone {
+    width: 48px;
+    height: 48px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+p.Copiryght{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    transform: rotate(-90deg);
+}

@@ -1,0 +1,36 @@
+/* src/components/HorizontalNav.css */
+.navbar-horizontal {
+    display: flex;
+    background-color: #020203;
+    justify-content: space-evenly;
+    height: 60px;
+    top: 0;
+    right: 0;
+    left: 0;
+    filter: drop-shadow(0px 8px 8px #00000040);
+}
+
+a.nav-ho.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+a.nav-ho {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+a:hover.nav-ho {
+    color: #E60000;
+}

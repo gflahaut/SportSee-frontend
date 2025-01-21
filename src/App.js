@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HorizontalNav from './components/HorizontalNav';
+import Home from './pages/Home/Home';
+import Profile from './pages/Profile/Profile';
+import NotFound from './pages/NotFound/NotFound';
+import Settings from './pages/Settings/Settings'; 
+import Communauty from './pages/Communauty/Communauty';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App-wrapper'>
+      <HorizontalNav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/user/:id" element={<Profile />} />
+        <Route path="/settings" element={<Settings/>} />
+        <Route path="/communauty" element={<Communauty/>} />
+        <Route path="/error" element={<NotFound />} /> 
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
