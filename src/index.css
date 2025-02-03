@@ -1,8 +1,10 @@
 body {
-  margin: 0;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* width: 1440px;
+  height: 1024px; */
+  margin: 0 auto;
 }
 *{
   font-family: "Roboto", sans-serif;

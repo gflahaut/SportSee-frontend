@@ -1,3 +1,7 @@
+.UserProfile-container{
+    margin-left: 6em;
+}
+
 .header-container {
     display: inline-flex;
 }

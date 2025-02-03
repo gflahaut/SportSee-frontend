@@ -46,8 +46,13 @@
     "@testing-library/user-event": "^13.5.0",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
-    "msw": "^2.4.1",
+    "msw": "^2.7.0",
     "text-encoding": "^0.7.0",
     "util": "^0.12.5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }

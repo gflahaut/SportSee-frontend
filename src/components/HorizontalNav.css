@@ -2,8 +2,8 @@
 .navbar-horizontal {
     display: flex;
     background-color: #020203;
-    justify-content: space-evenly;
-    height: 60px;
+    height: 10vh;
+    align-items: center;
     top: 0;
     right: 0;
     left: 0;
@@ -14,13 +14,19 @@ a.nav-ho.logo-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+}
+.navbar-link{
+    width: 14vw;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .navbar-links {
     list-style-type: none;
     display: flex;
+    flex-grow: 1;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 a.nav-ho {

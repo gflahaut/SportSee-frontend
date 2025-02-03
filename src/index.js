@@ -8,6 +8,10 @@ import { UserProfileProvider } from './context/UserProfileContext'; // Ensure co
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('./mocks/worker');
+  worker.start();
+}
 root.render(
   <React.StrictMode>
     <Router>
