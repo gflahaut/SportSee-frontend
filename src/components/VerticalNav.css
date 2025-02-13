@@ -1,14 +1,16 @@
 .vertical-nav {
+    font-family: 'Roboto';
     background-color: #020203;
     filter: drop-shadow(0px 8px 8px #00000040);
     width: 7vw;
+    height: 138vh;
     display: flex;
     flex-direction: column;
 }
 
 img.icone {
-    width: 48px;
-    height: 48px;
+    width: 55px;
+    height: 55px;
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -24,7 +26,7 @@ img.icone {
     padding: 0;
 }
 .icons li{
-    padding-bottom: 1em;
+    padding-bottom: 2em;
 }
 .copyright{
     display: flex;

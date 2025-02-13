@@ -1,7 +1,18 @@
+
+.custom-tooltip{
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
 .barChartWrapper_title{
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    font-weight: 550;
-    line-height: 24px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: black !important;
+    font-size: 17px !important;
+    margin-bottom: 0;
+    font-weight: bold;
+    margin-left: 2rem;
     text-align: left;
+    line-height: 24px;
 }

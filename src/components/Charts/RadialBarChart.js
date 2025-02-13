@@ -12,6 +12,7 @@ const CustomRadialBarChart = ({  data = 'default value' }) => {
 
     return (
         <div className='pieChart'>
+              <h3 className='pieChart-title'>Score</h3>
             <PieChart width={220} height={220}>
                 <text x={40} y={40} fill="#20253A" fontWeight={500} textAnchor="left" dominantBaseline="central">
                     <tspan fontSize="15">Score</tspan>

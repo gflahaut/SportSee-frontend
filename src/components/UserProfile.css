@@ -11,12 +11,22 @@
 }
 
 .map-container {
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 260px;
+        height: 550px;
+        margin-left: 1em;
 }
+.map-container > .icon-text{
+    width: 250px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
 .container {
     display: flex;
 }
@@ -25,13 +35,18 @@
     background-color: red;
     border-radius: .5rem;
     margin: 0 0.5em 0 0.5em;
+    width: 270px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
 }
 
 .BC-container {
     background: #FBFBFB;
-    border-radius: .5rem;
+    border-radius: 1rem;
+    margin: 0 0.5em 0 0.5em;
     height: 300px;
-    width: 700px;
+    width: 821px;
     margin-bottom: 5em;
 }
 
@@ -39,6 +54,8 @@
     background: #FBFBFB;
     border-radius: .5rem;
     margin: 0 0.5em 0 0.5em;
+    width: 270px;
+    height: 270px;
 }
 
 .top-charts-container,
@@ -50,10 +67,25 @@
 
 .RC-container {
     background: #282D30;
-    width: 260px;
-    height: 260px;
+    border-radius: .5rem;
+    width: 270px;
+    height: 270px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 0.5em 0 0.5em;
+    font-size: 11px;
+}
+
+@media screen and ( max-width : 1440px) {
+    .container{
+        flex-direction: column-reverse;
+    }
+    .map-container{
+        flex-direction: row;
+        height: auto;
+    }
+    .map-container > .icon-text{
+        height: auto;
+    }
 }

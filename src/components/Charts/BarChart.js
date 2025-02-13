@@ -2,6 +2,16 @@ import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import './BarChart.css';
 
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip">
+        <p className="label">{`${payload[0].value}`}</p>
+        <p className="label">{`${payload[1].value}`}</p>
+      </div>
+    );
+  }
+}
 const CustomBarChart = ({ data = 'default value' }) => {
 
   const translationMap = {
@@ -19,14 +29,13 @@ const CustomBarChart = ({ data = 'default value' }) => {
       <h2 className='barChartWrapper_title'>Activité quotidienne</h2>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data}>
-        <Legend className="legend" verticalAlign="top" height={0}/>
+        <Legend verticalAlign="top" wrapperStyle={{ lineHeight: '80px' }} />
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis
             dataKey="day"
             axisLine={true}
             tickLine={false}
             tick={{ fontSize: '14px', fontWeight: '500', fill: '#9B9EAC'}}
-            dy={15}
             tickFormatter={(day) => translationMap[day]}
             stroke="#DEDEDE"
             strokeWidth={2}
@@ -34,6 +43,8 @@ const CustomBarChart = ({ data = 'default value' }) => {
           />
           <YAxis
             orientation="right"
+            yAxisId="right"
+            dataKey="kilogram"
             tickCount={3}
             axisLine={false}
             tickLine={false}
@@ -41,9 +52,22 @@ const CustomBarChart = ({ data = 'default value' }) => {
             tick={{ color: '#9B9EAC', fontSize: '14px', fontWeight: '500', fill: '#9B9EAC' }}
             domain={['dataMin-2', 'dataMax+1']}
           />
-          <Tooltip />
+           <YAxis
+            orientation="left"
+            yAxisId="left"
+            dataKey="calories"
+            hide={true}
+            // tickCount={3}
+            axisLine={false}
+            tickLine={false}
+            // type="number"
+            // tick={{ color: '#9B9EAC', fontSize: '14px', fontWeight: '500', fill: '#9B9EAC' }}
+            // domain={['dataMin-10', 'dataMax+10']}
+          />
+          <Tooltip content={<CustomTooltip />}/>
           <Bar
             dataKey="kilogram"
+            yAxisId="right"
             fill="#282D30"
             barSize={8}
             legendType="circle"
@@ -53,6 +77,7 @@ const CustomBarChart = ({ data = 'default value' }) => {
           />
           <Bar
             dataKey="calories"
+            yAxisId="left"
             fill="#E60000"
             barSize={8}
             legendType="circle"

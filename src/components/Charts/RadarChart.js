@@ -13,7 +13,7 @@ const translationMap = {
 const CustomRadarChart = ({  data = 'default value' }) => {
   return (
     <div>
-        <RadarChart width={220} height={220} cx="50%" cy="50%" outerRadius="80" data={ data } margin={{ top: 0, right: 30, bottom: 0, left: 30 }} startAngle={30} endAngle={-330}>
+        <RadarChart width={220} height={220} cx="50%" cy="50%" outerRadius={80} data={ data } margin={{ top: 0, right: 30, bottom: 0, left: 30 }} startAngle={90} endAngle={-270}>
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             axisLine={false}

@@ -32,7 +32,7 @@ export const normalizeUserData = (data) => {
       data: performance.data.map((item) => ({
         value: item.value || 0,
         kind: performance.kind[item.kind] || 'Inconnu',
-      })),
+      })).reverse(),
     };
   };
   
