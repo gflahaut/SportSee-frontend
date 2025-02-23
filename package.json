@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "doc": "npx jsdoc-to-markdown src/**/*.js > README.md"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +47,7 @@
     "@testing-library/user-event": "^13.5.0",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
+    "jsdoc-to-markdown": "^9.1.1",
     "msw": "^2.7.0",
     "text-encoding": "^0.7.0",
     "util": "^0.12.5"

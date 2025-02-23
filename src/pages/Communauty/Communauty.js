@@ -1,6 +1,15 @@
+/**
+ * @fileoverview Composant de la page Communauty.
+ * Affiche un message indiquant que la page est en cours de développement.
+ */
+
 import React from 'react';
 import './Communauty.css';
 
+/**
+ * Composant de la page Communauty.
+ * @returns {JSX.Element} Composant React représentant la page Communauty.
+ */
 function Communauty() {
   return (
     <div className="Communauty">
